@@ -1,0 +1,42 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<!-- Formulario -->
+<form action="/add_pedido" method="POST">
+    <input type="text" name="pedido" placeholder="pedido">
+    <input type="text" name="producto" placeholder="producto">
+    <input type="text" name="camion" placeholder="camion">
+    <button type="submit">
+       save 
+    </button>
+</form>
+
+<!-- Mostrar datos -->
+<table>
+    <thead>
+        <tr>
+            <td>pedido</td>
+            <td>producto</td>
+            <td>camion</td>
+            <td>Operention</td>            
+        </tr>
+    </thead>
+    <tbody>
+        {% for pedido in pedidos %}
+            <tr>
+                <td>{{ pedido[1] }}</td>
+                <td>{{ pedido[2] }}</td>
+                <td>{{ pedido[3] }}</td> 
+                <td>
+                    <a href="/edit/{{pedido.0}}">Edit</a>
+                    <a href="/delete/{{pedido.0}}">Delete</a>
+                </td>      
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

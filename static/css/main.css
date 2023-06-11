@@ -1,0 +1,23 @@
+body {
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+
+  .table-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .table-container {
+    max-height: 300px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Habilitar desplazamiento vertical cuando sea necesario */
+    border: 1px solid #ddd; /* Borde para el contenedor */
+    padding: 8px; /* Espaciado interno para el contenedor */
+  }
+
+
+  

@@ -1,0 +1,9 @@
+<!-- Formulario -->
+<form action="/update/{{ pedido['id'] }}" method="POST">
+    <input type="text" name="pedido" placeholder="pedido" value="{{ pedido['pedido'] }}">
+    <input type="text" name="producto" placeholder="producto" value="{{ pedido['producto'] }}">
+    <input type="text" name="camion" placeholder="camion" value="{{ pedido['camion'] }}">
+    <button type="submit">
+       save 
+    </button>
+</form>
